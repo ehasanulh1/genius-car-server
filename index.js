@@ -39,7 +39,6 @@ async function run() {
 
         app.post('/jwt', (req, res) => {
             const user = req.body;
-            console.log(user)
             const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' })
             res.send({ token })
         })
@@ -61,7 +60,6 @@ async function run() {
         // orders api
         app.get('/orders', verifyJwt, async (req, res) => {
             const decoded = req.decoded;
-            console.log('inside order api', decoded)
             if (decoded.email !== req.query.email) {
                 res.status(403).send({ message: 'unauthorized access' })
             }
@@ -79,7 +77,6 @@ async function run() {
 
         app.post('/orders', async (req, res) => {
             const order = req.body;
-            console.log(order);
             const result = await orderCollection.insertOne(order);
             res.send(result);
         });
