@@ -1,11 +1,10 @@
 {
   "name": "genius-car-server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "build": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,5 +19,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehasanulh1/genius-car-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ehasanulh1/genius-car-server/issues"
+  },
+  "homepage": "https://github.com/ehasanulh1/genius-car-server#readme",
+  "description": ""
 }
